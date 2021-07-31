@@ -6,44 +6,53 @@
 </head>
 <body>
 
-	<fieldset>
+	<form>
+
+		<fieldset>
 		
 		<legend>Form</legend>
 
-
-		<form>
 				<label for="name"> <b> Enter Your Name Here </b> </label> <br>
-					<input type="text" name="name"> <br>
+					<input type="text" name="name" placeholder="Firstname LastName" required maxlength="25"> <br>
 
 				<label for="Email"> <b> Enter Your Email Address Here </b> </label> <br>
-					<input type="text" name="Email"> <br>
+					<input type="text" name="Email" value="test@example.com" required autofocus> <br>
 
 				<label for="password"> <b>Enter Your Password Here</b> </label> <br>
-					<input type="password" name="password"> <br>
-
+					<input type="password" name="password" required minlength="6"> <br>
+	
+		</fieldset>
 				<label for="Category"><b>Select your Category</b></label> <br>
 					<select id="Category" name="Category">
 						<option value="Student">Student</option>
 						<option value="Employee">Employee</option>
-						<option value="Freelancer">Freelancer</option>
+						<option value="Freelancer" selected>Freelancer </option>
 					</select>
-						Event date :
-						<input type="date" name="Eventdate"> <br>
+						<p><b>Event date :</b></p>
+						<input type="date" name="Eventdate" required> <br>
 
 
-<p><b>Select the Ticket</b></p>
-				<input type="radio" id="Ticket 1" name="Ticket" value="Ticket 1"> 
+				<p><b>Select the Ticket</b></p>
+				<input type="radio" id="Ticket 1" name="Ticket" value="Ticket 1" required> 
 					<label for="Ticket 1"> Ticket 1</label>
-				<input type="radio" id="Ticket 2" name="Ticket" value="Ticket 2"> 
+				<input type="radio" id="Ticket 2" name="Ticket" value="Ticket 2" required checked> 
 					<label for="Ticket 2"> Ticket 2</label>
-				<input type="radio" id="Ticket 3" name="Ticket" value="Ticket 3">
+				<input type="radio" id="Ticket 3" name="Ticket" value="Ticket 3" required >
 					<label for="Ticket 3"> Ticket 3</label>
 				
+					<p><b>Tick if the Payment is through Online</b></p>
+				<input type="checkbox" name="checkbox" required>
+					<label for="checkbox">Online Payment</label> <br>
 
-				
+
+					<p><b>Notes</b></p>
+				<textarea rows="5" cols="50" name="Notes" placeholder=" You can enter additional notes here"></textarea> <br>
+
+				<button type="button" onclick="alert('All data submitted Sucessfully')">Submit</button>
+
+				<input type="reset" name="reset">
 
 		</form>
 
-	</fieldset>
 </body>
 </html>
